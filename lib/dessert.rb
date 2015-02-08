@@ -1,17 +1,48 @@
+#บัณฑิตา อวยชัยเจริญ 5510613234
+#ชมพูนิกข์ ประการแก้ว 5510613325
 class Dessert
+  attr_accessor :name,:calories
   def initialize(name, calories)
-    # your code here
+    @name=name
+    @calories=calories
   end
+  def name=(x)
+    @name=x
+  end
+  def calories=(x)
+    @calories=x
+  end
+  def name
+    @name
+  end
+  def calories
+    @calories
+  end
+  
+  
   def healthy?
-    # your code here
+    if @calories<200
+      return true
+    end
+    return false
   end
+  
   def delicious?
-    # your code here
+    return true
   end
 end
 
 class JellyBean < Dessert
+  attr_accessor :flavor
+  def flavor
+    @flavor
+  end
+  def flavor=(x)
+    @flavor=x
+  end
   def initialize(flavor)
-    # your code here
+    a= flavor<<" jelly bean"
+    @name=a
+    @calories = 5
   end
 end
